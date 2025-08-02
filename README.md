@@ -1,6 +1,6 @@
 # 🍞 Expo Animated Toast
 
-Sleek toast UI for Expo + React Native. Supports custom content, icons, duration, position, and actions — styled like native iOS.
+Sleek animated toast for Expo + React Native. Supports custom content, icons, duration, position, and action.
 
 https://github.com/yourusername/expo-animated-toast/assets/preview.mp4
 

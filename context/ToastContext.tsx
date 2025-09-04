@@ -16,7 +16,7 @@ const DEFAULT_TOAST_OPTIONS: Required<ToastOptions> = {
   type: "default",
   position: "bottom",
   onClose: () => {},
-  action: {},
+  action: null,
 };
 
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
@@ -49,7 +49,7 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
       setToasts((prevToasts) => [...prevToasts, toast]);
       return id;
     },
-    []
+    [],
   );
 
   const update = useCallback(
@@ -65,11 +65,11 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({
                   ...options,
                 },
               }
-            : toast
-        )
+            : toast,
+        ),
       );
     },
-    []
+    [],
   );
 
   const dismiss = useCallback((id: string) => {

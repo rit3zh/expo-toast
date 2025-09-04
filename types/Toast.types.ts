@@ -11,9 +11,9 @@ export interface ToastOptions {
   position?: ToastPosition;
   onClose?: () => void;
   action?: {
-    label?: string;
-    onPress?: () => void;
-  };
+    label: string;
+    onPress: () => void;
+  } | null;
 }
 
 export interface Toast {
@@ -28,7 +28,7 @@ export interface ToastContextValue {
   update: (
     id: string,
     content: React.ReactNode | string,
-    options?: ToastOptions
+    options?: ToastOptions,
   ) => void;
   dismiss: (id: string) => void;
   dismissAll: () => void;
